@@ -1,4 +1,5 @@
-//! A crate for dynamically generating Dockerfiles.
+#![cfg_attr(feature="docinclude", feature(external_doc))]
+#![cfg_attr(feature="docinclude", doc(include="../README.md"))]
 
 mod builder;
 mod instructions;

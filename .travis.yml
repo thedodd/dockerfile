@@ -5,5 +5,9 @@ rust:
 services:
   - docker
 
+before_install:
+  - rustup install nightly
+
 script:
-  - cargo test --all-targets --all-features
+  - cargo test --all-targets
+  - cargo +nightly test --doc --all-features
