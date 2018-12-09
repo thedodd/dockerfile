@@ -13,6 +13,8 @@ A Rust library for dynamically generating Dockerfiles.
 
 The use case this crate was originally built for was to build Docker images from a worker service running in Kubernetes for client workloads. This is definitely not the only pattern that is supported. The generated Dockerfiles could be persisted somewhere or discarded immediately after use. The containers generated are standard containers, built according to the Dockerfiles you generated.
 
+All of the Dockerfile instructions are supported in raw form as of 2018.12.09. There is an issue open to add more structured and type-safe interfaces for the instructions which need it.
+
 ### get started
 First you will need to add this to your `Cargo.toml` dependencies.
 
@@ -50,4 +52,4 @@ CMD echo 'Hello. Goodbye.'
 ```
 
 ### development
-This crate is in an early state, and there are a few additional things to be done with it. I would like to experiment with adding constructors for the various forms of instructions; EG, offer a constructor for `CMD` which takes an `impl Iterator<Item=AsRef<str>>` for building the form `CMD ["arg0", "arg1"]` &c. Not sure on that yet.
+I would like to have this crate offer a type-safe interface for constructing the various Dockerfile instructions. This will help reduce bugs which could only be found once you actually attempt to invoke the docker build. I would like to experiment with adding constructors for the various forms of instructions; EG, offer a constructor for `CMD` which takes an `impl Iterator<Item=AsRef<str>>` for building the form `CMD ["arg0", "arg1"]` &c.
