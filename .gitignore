@@ -1,0 +1,8 @@
+# Directory Ignores #
+target
+
+# File Ignores #
+
+/target
+**/*.rs.bk
+Cargo.lock
