@@ -1,5 +1,14 @@
 dockerfile
 ==========
+[![Build Status](https://travis-ci.org/thedodd/dockerfile.svg?branch=master)](https://travis-ci.org/thedodd/dockerfile)
+[![Crates.io](https://img.shields.io/crates/v/dockerfile.svg)](https://crates.io/crates/dockerfile)
+[![docs.rs](https://docs.rs/dockerfile/badge.svg)](https://docs.rs/dockerfile)
+[![License](https://img.shields.io/badge/license-Apache%202.0-blue.svg)](LICENSE)
+![Crates.io](https://img.shields.io/crates/d/dockerfile.svg)
+![Crates.io](https://img.shields.io/crates/dv/dockerfile.svg)
+<!-- [![GitHub issues open](https://img.shields.io/github/issues-raw/thedodd/dockerfile.svg)]() -->
+<!-- [![GitHub issues closed](https://img.shields.io/github/issues-closed-raw/thedodd/dockerfile.svg)]() -->
+
 A Rust library for dynamically generating Dockerfiles.
 
 The use case this crate was originally built for was to build Docker images from a worker service running in Kubernetes for client workloads. This is definitely not the only pattern that is supported. The generated Dockerfiles could be persisted somewhere or discarded immediately after use. The containers generated are standard containers, built according to the Dockerfiles you generated.

@@ -1,7 +1,17 @@
 [package]
 name = "dockerfile"
+description = "A Rust library for dynamically generating Dockerfiles."
 version = "0.1.0"
+
 authors = ["Anthony Dodd <dodd.anthonyjosiah@gmail.com>"]
+categories = ["api-bindings", "config", "data-structures", "development-tools"]
+documentation = "https://docs.rs/dockerfile"
+homepage = "https://github.com/thedodd/dockerfile"
+keywords = ["docker", "dockerfile"]
+license = "Apache-2.0"
+readme = "README.md"
+repository = "https://github.com/thedodd/dockerfile"
+
 edition = "2018"
 
 [dependencies]

@@ -1,0 +1,9 @@
+sudo: required
+language: rust
+rust:
+  - stable
+services:
+  - docker
+
+script:
+  - cargo test --all-targets --all-features
