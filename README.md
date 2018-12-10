@@ -19,7 +19,7 @@ All of the Dockerfile instructions are supported in raw form as of 2018.12.09. T
 First you will need to add this to your `Cargo.toml` dependencies.
 
 ```toml
-dockerfile = "0.1"
+dockerfile = "0.2"
 ```
 
 Now you can start building Dockerfiles.
