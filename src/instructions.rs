@@ -7,7 +7,7 @@ use std::{
 /// The `ADD` instruction copies new files, directories or remote file URLs from `<src>` and adds
 /// them to the filesystem of the image at the path `<dest>`.
 ///
-/// See the docs at https://docs.docker.com/engine/reference/builder/#add
+/// [See the docs here](https://docs.docker.com/engine/reference/builder/#add).
 pub struct Add(Cow<'static, str>);
 
 impl Add {
@@ -25,7 +25,7 @@ impl fmt::Display for Add {
 /// The `ARG` instruction defines a variable that users can pass at build-time to the builder with
 /// the `docker build` command using the `--build-arg <varname>=<value>` flag.
 ///
-/// See the docs at https://docs.docker.com/engine/reference/builder/#arg
+/// [See the docs here](https://docs.docker.com/engine/reference/builder/#arg).
 pub struct Arg(Cow<'static, str>);
 
 impl Arg {
@@ -42,7 +42,7 @@ impl fmt::Display for Arg {
 
 /// The main purpose of a `CMD` is to provide defaults for an executing container.
 ///
-/// See the docs at https://docs.docker.com/engine/reference/builder/#cmd
+/// [See the docs here](https://docs.docker.com/engine/reference/builder/#cmd).
 pub struct Cmd(Cow<'static, str>);
 
 impl Cmd {
@@ -60,7 +60,7 @@ impl fmt::Display for Cmd {
 /// The `COPY` instruction copies new files or directories from `<src>` and adds them to the
 /// filesystem of the container at the path `<dest>`.
 ///
-/// See the docs at https://docs.docker.com/engine/reference/builder/#copy
+/// [See the docs here](https://docs.docker.com/engine/reference/builder/#copy).
 pub struct Copy(Cow<'static, str>);
 
 impl Copy {
@@ -78,7 +78,7 @@ impl fmt::Display for Copy {
 /// Parser directives are optional, and affect the way in which subsequent lines in a `Dockerfile`
 /// are handled.
 ///
-/// See the docs at https://docs.docker.com/engine/reference/builder/#parser-directives
+/// [See the docs here](https://docs.docker.com/engine/reference/builder/#parser-directives).
 pub struct Directive(Cow<'static, str>);
 
 impl Directive {
@@ -95,7 +95,7 @@ impl fmt::Display for Directive {
 
 /// An `ENTRYPOINT` allows you to configure a container that will run as an executable.
 ///
-/// See the docs at https://docs.docker.com/engine/reference/builder/#entrypoint
+/// [See the docs here](https://docs.docker.com/engine/reference/builder/#entrypoint).
 pub struct Entrypoint(Cow<'static, str>);
 
 impl Entrypoint {
@@ -112,7 +112,7 @@ impl fmt::Display for Entrypoint {
 
 /// The `ENV` instruction sets the environment variable `<key>` to the value `<value>`.
 ///
-/// See the docs at https://docs.docker.com/engine/reference/builder/#env
+/// [See the docs here](https://docs.docker.com/engine/reference/builder/#env).
 pub struct Env(Cow<'static, str>);
 
 impl Env {
@@ -130,7 +130,7 @@ impl fmt::Display for Env {
 /// The `EXPOSE` instruction informs Docker that the container listens on the specified network
 /// ports at runtime.
 ///
-/// See the docs at https://docs.docker.com/engine/reference/builder/#expose
+/// [See the docs here](https://docs.docker.com/engine/reference/builder/#expose).
 pub struct Expose(Cow<'static, str>);
 
 impl Expose {
@@ -148,7 +148,7 @@ impl fmt::Display for Expose {
 /// The `FROM` instruction initializes a new build stage and sets the base image for subsequent
 /// instructions.
 ///
-/// See the docs at https://docs.docker.com/engine/reference/builder/#from
+/// [See the docs here](https://docs.docker.com/engine/reference/builder/#from).
 pub struct From(Cow<'static, str>);
 
 impl From {
@@ -166,7 +166,7 @@ impl fmt::Display for From {
 /// The `HEALTHCHECK` instruction tells Docker how to test a container to check that it is still
 /// working.
 ///
-/// See the docs at https://docs.docker.com/engine/reference/builder/#healthcheck
+/// [See the docs here](https://docs.docker.com/engine/reference/builder/#healthcheck).
 pub struct Healthcheck(Cow<'static, str>);
 
 impl Healthcheck {
@@ -183,7 +183,7 @@ impl fmt::Display for Healthcheck {
 
 /// The `LABEL` instruction adds metadata to an image.
 ///
-/// See the docs at https://docs.docker.com/engine/reference/builder/#label
+/// [See the docs here](https://docs.docker.com/engine/reference/builder/#label).
 pub struct Label(Cow<'static, str>);
 
 impl Label {
@@ -203,7 +203,7 @@ impl fmt::Display for Label {
 /// the context of the downstream build, as if it had been inserted immediately after the `FROM`
 /// instruction in the downstream `Dockerfile`.
 ///
-/// See the docs at https://docs.docker.com/engine/reference/builder/#onbuild
+/// [See the docs here](https://docs.docker.com/engine/reference/builder/#onbuild).
 pub struct Onbuild(Cow<'static, str>);
 
 impl Onbuild {
@@ -221,7 +221,7 @@ impl fmt::Display for Onbuild {
 /// The `RUN` instruction will execute any commands in a new layer on top of the current image and
 /// commit the results.
 ///
-/// See the docs at https://docs.docker.com/engine/reference/builder/#run
+/// [See the docs here](https://docs.docker.com/engine/reference/builder/#run).
 pub struct Run(Cow<'static, str>);
 
 impl Run {
@@ -239,7 +239,7 @@ impl fmt::Display for Run {
 /// The `SHELL` instruction allows the default shell used for the shell form of commands to be
 /// overridden.
 ///
-/// See the docs at https://docs.docker.com/engine/reference/builder/#shell
+/// [See the docs here](https://docs.docker.com/engine/reference/builder/#shell).
 pub struct Shell(Cow<'static, str>);
 
 impl Shell {
@@ -257,7 +257,7 @@ impl fmt::Display for Shell {
 /// The `STOPSIGNAL` instruction sets the system call signal that will be sent to the container
 /// to exit.
 ///
-/// See the docs at https://docs.docker.com/engine/reference/builder/#stopsignal
+/// [See the docs here](https://docs.docker.com/engine/reference/builder/#stopsignal).
 pub struct Stopsignal(Cow<'static, str>);
 
 impl Stopsignal {
@@ -276,7 +276,7 @@ impl fmt::Display for Stopsignal {
 /// use when running the image and for any `RUN`, `CMD` and `ENTRYPOINT` instructions that follow
 /// it in the `Dockerfile`.
 ///
-/// See the docs at https://docs.docker.com/engine/reference/builder/#user
+/// [See the docs here](https://docs.docker.com/engine/reference/builder/#user).
 pub struct User(Cow<'static, str>);
 
 impl User {
@@ -294,7 +294,7 @@ impl fmt::Display for User {
 /// The `VOLUME` instruction creates a mount point with the specified name and marks it as holding
 /// externally mounted volumes from native host or other containers.
 ///
-/// See the docs at https://docs.docker.com/engine/reference/builder/#volume
+/// [See the docs here](https://docs.docker.com/engine/reference/builder/#volume).
 pub struct Volume(Cow<'static, str>);
 
 impl Volume {
@@ -312,7 +312,7 @@ impl fmt::Display for Volume {
 /// The `WORKDIR` instruction sets the working directory for any `RUN`, `CMD`, `ENTRYPOINT`,
 /// `COPY` and `ADD` instructions that follow it in the `Dockerfile`.
 ///
-/// See the docs at https://docs.docker.com/engine/reference/builder/#workdir
+/// [See the docs here](https://docs.docker.com/engine/reference/builder/#workdir).
 pub struct Workdir(Cow<'static, str>);
 
 impl Workdir {

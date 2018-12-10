@@ -1,7 +1,7 @@
 [package]
 name = "dockerfile"
 description = "A Rust library for dynamically generating Dockerfiles."
-version = "0.2.0"
+version = "0.2.1"
 
 authors = ["Anthony Dodd <dodd.anthonyjosiah@gmail.com>"]
 categories = ["api-bindings", "config", "data-structures", "development-tools"]
